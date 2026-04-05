@@ -1,0 +1,54 @@
+{
+  "name": "@bagdock/loyalty-react",
+  "version": "0.1.0",
+  "description": "Bagdock Loyalty React SDK — embeddable themed components for referrals, rewards, and points",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./themes": {
+      "types": "./dist/themes/index.d.ts",
+      "import": "./dist/themes/index.mjs",
+      "require": "./dist/themes/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/index.ts src/themes/index.ts --format cjs,esm --dts --clean --external react --external react-dom",
+    "dev": "tsup src/index.ts src/themes/index.ts --format cjs,esm --dts --watch --external react --external react-dom",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "dependencies": {
+    "@bagdock/loyalty": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bagdock/bagdock-loyalty-react"
+  },
+  "homepage": "https://bagdock.com/docs/loyalty-react",
+  "bugs": "https://github.com/bagdock/bagdock-loyalty-react/issues",
+  "keywords": ["bagdock", "loyalty", "react", "embed", "referrals", "rewards", "widget", "self-storage"],
+  "license": "MIT",
+  "sideEffects": false
+}

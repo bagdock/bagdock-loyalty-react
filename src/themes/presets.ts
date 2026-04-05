@@ -1,0 +1,93 @@
+import type { BagdockVariables } from './types'
+
+const baseVariables: Required<BagdockVariables> = {
+  colorPrimary: '#01696f',
+  colorPrimaryText: '#ffffff',
+  colorBackground: '#ffffff',
+  colorSurface: '#f8f9fa',
+  colorSurfaceHover: '#f0f1f3',
+  colorText: '#1a1a2e',
+  colorTextSecondary: '#4a4a6a',
+  colorTextMuted: '#9ca3af',
+  colorBorder: '#e5e7eb',
+  colorSuccess: '#10b981',
+  colorWarning: '#f59e0b',
+  colorDanger: '#ef4444',
+  colorAccent: '#6366f1',
+
+  borderRadius: '8px',
+  borderRadiusSm: '4px',
+  borderRadiusLg: '12px',
+
+  fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+  fontFamilyMono: '"SF Mono", "Fira Code", "Fira Mono", Menlo, monospace',
+  fontSize: '14px',
+  fontSizeSm: '12px',
+  fontSizeLg: '16px',
+  fontSizeXl: '20px',
+  fontWeight: '400',
+  fontWeightBold: '600',
+
+  spacingUnit: '4px',
+
+  shadowSm: '0 1px 2px rgba(0,0,0,0.05)',
+  shadowMd: '0 4px 6px rgba(0,0,0,0.07)',
+  shadowLg: '0 10px 15px rgba(0,0,0,0.1)',
+}
+
+export const themes: Record<string, Required<BagdockVariables>> = {
+  default: { ...baseVariables },
+
+  night: {
+    ...baseVariables,
+    colorPrimary: '#2dd4bf',
+    colorPrimaryText: '#0d1117',
+    colorBackground: '#0d1117',
+    colorSurface: '#161b22',
+    colorSurfaceHover: '#21262d',
+    colorText: '#f0f6fc',
+    colorTextSecondary: '#8b949e',
+    colorTextMuted: '#484f58',
+    colorBorder: '#30363d',
+    colorAccent: '#79c0ff',
+    shadowSm: '0 1px 2px rgba(0,0,0,0.3)',
+    shadowMd: '0 4px 6px rgba(0,0,0,0.4)',
+    shadowLg: '0 10px 15px rgba(0,0,0,0.5)',
+  },
+
+  flat: {
+    ...baseVariables,
+    colorPrimary: '#01696f',
+    colorSurface: '#f0fdfa',
+    colorSurfaceHover: '#e6f7f5',
+    colorBorder: '#d1d5db',
+    borderRadius: '4px',
+    borderRadiusSm: '2px',
+    borderRadiusLg: '6px',
+    shadowSm: 'none',
+    shadowMd: 'none',
+    shadowLg: 'none',
+  },
+
+  neobrutalism: {
+    ...baseVariables,
+    colorPrimary: '#ff6b6b',
+    colorPrimaryText: '#000000',
+    colorBackground: '#fffbeb',
+    colorSurface: '#fef3c7',
+    colorSurfaceHover: '#fde68a',
+    colorText: '#000000',
+    colorTextSecondary: '#1e293b',
+    colorTextMuted: '#475569',
+    colorBorder: '#000000',
+    colorAccent: '#8b5cf6',
+    borderRadius: '0px',
+    borderRadiusSm: '0px',
+    borderRadiusLg: '0px',
+    fontWeight: '500',
+    fontWeightBold: '800',
+    shadowSm: '2px 2px 0 #000000',
+    shadowMd: '4px 4px 0 #000000',
+    shadowLg: '6px 6px 0 #000000',
+  },
+}
