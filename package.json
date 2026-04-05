@@ -1,6 +1,6 @@
 {
   "name": "@bagdock/loyalty-react",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Bagdock Loyalty React SDK — embeddable themed components for referrals, rewards, and points",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
