@@ -1,6 +1,6 @@
 {
   "name": "@bagdock/loyalty-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Bagdock Loyalty React SDK — embeddable themed components for referrals, rewards, and points",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -17,7 +17,9 @@
       "require": "./dist/themes/index.js"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup src/index.ts src/themes/index.ts --format cjs,esm --dts --clean --external react --external react-dom",
     "dev": "tsup src/index.ts src/themes/index.ts --format cjs,esm --dts --watch --external react --external react-dom",
@@ -39,8 +41,7 @@
     "typescript": "^5.3.3"
   },
   "publishConfig": {
-    "access": "public",
-    "provenance": true
+    "access": "public"
   },
   "repository": {
     "type": "git",
@@ -48,7 +49,16 @@
   },
   "homepage": "https://bagdock.com/docs/loyalty-react",
   "bugs": "https://github.com/bagdock/bagdock-loyalty-react/issues",
-  "keywords": ["bagdock", "loyalty", "react", "embed", "referrals", "rewards", "widget", "self-storage"],
+  "keywords": [
+    "bagdock",
+    "loyalty",
+    "react",
+    "embed",
+    "referrals",
+    "rewards",
+    "widget",
+    "self-storage"
+  ],
   "license": "MIT",
   "sideEffects": false
 }
